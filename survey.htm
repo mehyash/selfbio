@@ -1,0 +1,103 @@
+<html>
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+body{
+background-color:#E7BFBF
+}
+.form-container{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+h1{
+ font-size:70px;
+ text-align:center;
+ background-color:#EF5C14
+ 
+}
+form{
+background-color:white;
+width:1000px;
+height:1000px;
+align:center;
+padding:20px;    
+}
+</style>
+</head>
+<body>
+<script>
+function getdata(){
+ let name=document.getElementById('fname').value;
+ window.alert("Welcome "+name);
+}
+</script>
+<h1>SURVEY FORM</h1>
+<div class="form-container">
+<form method="post">
+<fieldset>
+<legend>Personal Details</legend>
+<label name="fname">First Name&nbsp;&nbsp;</label>
+<input type="text" required id="fname" name="fname">
+<label name="lname">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last Name</label>
+<input type="text" required id="lname" name="lname"><br><br><br>
+<label name="age">Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="number" required id="age" name="age"><br><br>
+<label for"dob">Date Of Birth&nbsp;&nbsp;</label>
+<input type="Date" required id="dob" name="dob"><br><br>
+<label>Gender</label><br><br>
+<input type="checkbox" id="male" name="male" value="Male">
+<label for="male">Male</label><br><br>
+<input type="checkbox" id="female" name="female" value="Female">
+<label for="female">Female</label><br><br>
+<label for="telephone">Contact No.&nbsp;&nbsp;&nbsp;</label>
+<input type="tel" required id="telephone" name="telephone" pattern=[0-9]{10}><br><br>
+<label for="address">Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="text" required id="address" name="address">
+</fieldset>
+<br>
+<fieldset>
+<legend>Educational Details</legend>
+<label for="school">School Name&nbsp;&nbsp;</label>
+<input type="text" required id="school" name="school"><br><br>
+<label for="university">University/College</label>
+<input type="text" required id="university" name="university"><br><br>
+<label for="degree">Degree &nbsp;&nbsp;&nbsp;</label>
+<select required id="degree" name="degree">
+<option value="B.Tech">B.Tech</option>
+<option value="M.Tech">M.Tech</option>
+<option value="BCA">BCA</option>
+<option value="Ph.D">Ph.D</option>
+<option value="B.Com">B.Com</option>
+<option value="B.A">B.A</option>
+</select><br><br>
+<label for="yearpass">PassOut Year &nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="year" required id="yearpass" name="yearpass" required ><br><br>
+<label for="cgpa">CGPA&nbsp;&nbsp;&nbsp;</label>
+<input type="number" required id="cgpa" name="cgpa" step=".01" max="10"><br><br>
+</fieldset>
+<fieldset>
+<legend>Professional Details</legend>
+<label name="name">First Name&nbsp;&nbsp;</label>
+<input type="text" required id="compname" name="compname"><br><br>
+<label for="empytype">Type</label>
+<select required id="emptype" name="emptype">
+<option value="Business">Business</option>
+<option value="Partnership">Partnership</option>
+<option value="Proprietorship">Proprietorship</option>
+<option value="Employee">Employee</option>
+</select><br><br>
+<label name="experience">Experience&nbsp;&nbsp;</label>
+<input type="number" required id="experience" name="experience">
+</fieldset>
+<br><br>
+<button type="button" size="122" onclick="getdata()" >SUBMIT&nbsp;&nbsp;&nbsp;</button>
+<input type="reset">
+</form>
+</div>
+
